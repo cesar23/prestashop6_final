@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>ModuleTesting</name>
+	<displayName><![CDATA[M&oacute;dulo de Pruebas]]></displayName>
+	<version><![CDATA[1.0b]]></version>
+	<description><![CDATA[M&oacute;dulo creado a partir de otro. Pruebas.]]></description>
+	<author><![CDATA[Pablo Fern&aacute;ndez para islaVisual]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<is_configurable>0</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>
