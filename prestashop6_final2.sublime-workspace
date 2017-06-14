@@ -1,0 +1,2090 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"lo",
+				"localization/"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"c",
+				"classes/"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"sub",
+				"submit"
+			],
+			[
+				"lege",
+				"legend\tTag"
+			],
+			[
+				"fi",
+				"fieldset\t<fieldset>"
+			],
+			[
+				"hoo",
+				"hookLeftColumn"
+			],
+			[
+				"met",
+				"method"
+			],
+			[
+				"in",
+				"innerText"
+			],
+			[
+				"crea",
+				"createElement〔function〕"
+			],
+			[
+				"for",
+				"formulario.js"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"limp",
+				"limpiaForm($('#suscripcion_popup"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"obj",
+				"objNOSQL"
+			],
+			[
+				"fun",
+				"Funciones.php"
+			],
+			[
+				"entra",
+				"$entrada_txt〔variable〕"
+			],
+			[
+				"to",
+				"comprobar_token〔function〕"
+			],
+			[
+				"hi",
+				"hide〔function〕"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"Us",
+				"UsuarioRequest"
+			],
+			[
+				"print_r",
+				"print_r\tprint_r"
+			],
+			[
+				"strto",
+				"strtoupper"
+			],
+			[
+				"te",
+				"teto"
+			],
+			[
+				"usu",
+				"usuario"
+			],
+			[
+				"di",
+				"disabled\tAttr"
+			],
+			[
+				"html5",
+				"html5\thtml5_structura"
+			],
+			[
+				"art",
+				"articulo"
+			],
+			[
+				"es",
+				"es_ES.js"
+			],
+			[
+				"loa",
+				"loading_json.gif\tw:16 h:11"
+			],
+			[
+				"he",
+				"height\tAttr"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"wi",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "themes/default-bootstrap/product-list.tpl",
+			"settings":
+			{
+				"buffer_size": 15129,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "themes/default-bootstrap/product.tpl",
+			"settings":
+			{
+				"buffer_size": 42832,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/defines.inc.php",
+			"settings":
+			{
+				"buffer_size": 8011,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 1608 files for \"SOLUSYSTEM\"\n\nD:\\xampp2\\htdocs\\prestashop6_final2\\modules\\blockfacebook\\blockfacebook.tpl:\n   26  {if $facebookurl != ''}\n   27  <div id=\"fb-root\"></div>\n   28: {if $smarty.const._SOLUSYSTEM_WEB_THEME_=='senorpeluche'}\n   29  <div id=\"facebook_block\" class=\"block\">\n   30  {else}\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 324,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "<?php\n/*\n* 2007-2016 PrestaShop\n*\n* NOTICE OF LICENSE\n*\n* This source file is subject to the Open Software License (OSL 3.0)\n* that is bundled with this package in the file LICENSE.txt.\n* It is also available through the world-wide-web at this URL:\n* http://opensource.org/licenses/osl-3.0.php\n* If you did not receive a copy of the license and are unable to\n* obtain it through the world-wide-web, please send an email\n* to license@prestashop.com so we can send you a copy immediately.\n*\n* DISCLAIMER\n*\n* Do not edit or add to this file if you wish to upgrade PrestaShop to newer\n* versions in the future. If you wish to customize PrestaShop for your\n* needs please refer to http://www.prestashop.com for more information.\n*\n*  @author PrestaShop SA <contact@prestashop.com>\n*  @copyright  2007-2016 PrestaShop SA\n*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)\n*  International Registered Trademark & Property of PrestaShop SA\n*/\n\ndefine('_PS_SMARTY_DIR_', _PS_TOOL_DIR_.'smarty/');\n\n\n//require_once(_PS_SMARTY_DIR_.'Smarty.class.php');\nrequire_once(_PS_SMARTY_DIR_.'SmartyBC.class.php');\n\nglobal $smarty;\n//$smarty = new SmartyCustom();\n$smarty = new SmartyBC();\n$smarty->setCompileDir(_PS_CACHE_DIR_.'smarty/compile');\n$smarty->setCacheDir(_PS_CACHE_DIR_.'smarty/cache');\nif (!Tools::getSafeModeStatus()) {\n    $smarty->use_sub_dirs = true;\n}\n$smarty->setConfigDir(_PS_SMARTY_DIR_.'configs');\n$smarty->caching = false;\nif (Configuration::get('PS_SMARTY_CACHING_TYPE') == 'mysql') {\n    include(_PS_CLASS_DIR_.'/SmartyCacheResourceMysql.php');\n    $smarty->caching_type = 'mysql';\n}\n$smarty->force_compile = (Configuration::get('PS_SMARTY_FORCE_COMPILE') == _PS_SMARTY_FORCE_COMPILE_) ? true : false;\n$smarty->compile_check = (Configuration::get('PS_SMARTY_FORCE_COMPILE') >= _PS_SMARTY_CHECK_COMPILE_) ? true : false;\n$smarty->debug_tpl = _PS_ALL_THEMES_DIR_.'debug.tpl';\n\n/* Use this constant if you want to load smarty without all PrestaShop functions */\nif (defined('_PS_SMARTY_FAST_LOAD_') && _PS_SMARTY_FAST_LOAD_) {\n    return;\n}\n\nif (defined('_PS_ADMIN_DIR_')) {\n    require_once(dirname(__FILE__).'/smartyadmin.config.inc.php');\n} else {\n    require_once(dirname(__FILE__).'/smartyfront.config.inc.php');\n}\n\nsmartyRegisterFunction($smarty, 'modifier', 'truncate', 'smarty_modifier_truncate');\nsmartyRegisterFunction($smarty, 'modifier', 'secureReferrer', array('Tools', 'secureReferrer'));\n\nsmartyRegisterFunction($smarty, 'function', 't', 'smartyTruncate'); // unused\nsmartyRegisterFunction($smarty, 'function', 'm', 'smartyMaxWords'); // unused\nsmartyRegisterFunction($smarty, 'function', 'p', 'smartyShowObject'); // Debug only\nsmartyRegisterFunction($smarty, 'function', 'd', 'smartyDieObject'); // Debug only\nsmartyRegisterFunction($smarty, 'function', 'l', 'smartyTranslate', false);\nsmartyRegisterFunction($smarty, 'function', 'hook', 'smartyHook');\nsmartyRegisterFunction($smarty, 'function', 'toolsConvertPrice', 'toolsConvertPrice');\nsmartyRegisterFunction($smarty, 'modifier', 'json_encode', array('Tools', 'jsonEncode'));\nsmartyRegisterFunction($smarty, 'modifier', 'json_decode', array('Tools', 'jsonDecode'));\nsmartyRegisterFunction($smarty, 'function', 'dateFormat', array('Tools', 'dateFormat'));\nsmartyRegisterFunction($smarty, 'function', 'convertPrice', array('Product', 'convertPrice'));\nsmartyRegisterFunction($smarty, 'function', 'convertPriceWithCurrency', array('Product', 'convertPriceWithCurrency'));\nsmartyRegisterFunction($smarty, 'function', 'displayWtPrice', array('Product', 'displayWtPrice'));\nsmartyRegisterFunction($smarty, 'function', 'displayWtPriceWithCurrency', array('Product', 'displayWtPriceWithCurrency'));\nsmartyRegisterFunction($smarty, 'function', 'displayPrice', array('Tools', 'displayPriceSmarty'));\nsmartyRegisterFunction($smarty, 'modifier', 'convertAndFormatPrice', array('Product', 'convertAndFormatPrice')); // used twice\nsmartyRegisterFunction($smarty, 'function', 'getAdminToken', array('Tools', 'getAdminTokenLiteSmarty'));\nsmartyRegisterFunction($smarty, 'function', 'displayAddressDetail', array('AddressFormat', 'generateAddressSmarty'));\nsmartyRegisterFunction($smarty, 'function', 'getWidthSize', array('Image', 'getWidth'));\nsmartyRegisterFunction($smarty, 'function', 'getHeightSize', array('Image', 'getHeight'));\nsmartyRegisterFunction($smarty, 'function', 'addJsDef', array('Media', 'addJsDef'));\nsmartyRegisterFunction($smarty, 'block', 'addJsDefL', array('Media', 'addJsDefL'));\nsmartyRegisterFunction($smarty, 'modifier', 'boolval', array('Tools', 'boolval'));\nsmartyRegisterFunction($smarty, 'modifier', 'cleanHtml', 'smartyCleanHtml');\n\nfunction smartyDieObject($params, &$smarty)\n{\n    return Tools::d($params['var']);\n}\n\nfunction smartyShowObject($params, &$smarty)\n{\n    return Tools::p($params['var']);\n}\n\nfunction smartyMaxWords($params, &$smarty)\n{\n    Tools::displayAsDeprecated();\n    $params['s'] = str_replace('...', ' ...', html_entity_decode($params['s'], ENT_QUOTES, 'UTF-8'));\n    $words = explode(' ', $params['s']);\n\n    foreach ($words as &$word) {\n        if (Tools::strlen($word) > $params['n']) {\n            $word = Tools::substr(trim(chunk_split($word, $params['n']-1, '- ')), 0, -1);\n        }\n    }\n\n    return implode(' ',  Tools::htmlentitiesUTF8($words));\n}\n\nfunction smartyTruncate($params, &$smarty)\n{\n    Tools::displayAsDeprecated();\n    $text = isset($params['strip']) ? strip_tags($params['text']) : $params['text'];\n    $length = $params['length'];\n    $sep = isset($params['sep']) ? $params['sep'] : '...';\n\n    if (Tools::strlen($text) > $length + Tools::strlen($sep)) {\n        $text = Tools::substr($text, 0, $length).$sep;\n    }\n\n    return (isset($params['encode']) ? Tools::htmlentitiesUTF8($text, ENT_NOQUOTES) : $text);\n}\n\nfunction smarty_modifier_truncate($string, $length = 80, $etc = '...', $break_words = false, $middle = false, $charset = 'UTF-8')\n{\n    if (!$length) {\n        return '';\n    }\n\n    $string = trim($string);\n\n    if (Tools::strlen($string) > $length) {\n        $length -= min($length, Tools::strlen($etc));\n        if (!$break_words && !$middle) {\n            $string = preg_replace('/\\s+?(\\S+)?$/u', '', Tools::substr($string, 0, $length+1, $charset));\n        }\n        return !$middle ? Tools::substr($string, 0, $length, $charset).$etc : Tools::substr($string, 0, $length/2, $charset).$etc.Tools::substr($string, -$length/2, $length, $charset);\n    } else {\n        return $string;\n    }\n}\n\nfunction smarty_modifier_htmlentitiesUTF8($string)\n{\n    return Tools::htmlentitiesUTF8($string);\n}\nfunction smartyMinifyHTML($tpl_output, &$smarty)\n{\n    $context = Context::getContext();\n    if (isset($context->controller) && in_array($context->controller->php_self, array('pdf-invoice', 'pdf-order-return', 'pdf-order-slip'))) {\n        return $tpl_output;\n    }\n    $tpl_output = Media::minifyHTML($tpl_output);\n    return $tpl_output;\n}\n\nfunction smartyPackJSinHTML($tpl_output, &$smarty)\n{\n    $context = Context::getContext();\n    if (isset($context->controller) && in_array($context->controller->php_self, array('pdf-invoice', 'pdf-order-return', 'pdf-order-slip'))) {\n        return $tpl_output;\n    }\n    $tpl_output = Media::packJSinHTML($tpl_output);\n    return $tpl_output;\n}\n\nfunction smartyRegisterFunction($smarty, $type, $function, $params, $lazy = true)\n{\n    if (!in_array($type, array('function', 'modifier', 'block'))) {\n        return false;\n    }\n\n    // lazy is better if the function is not called on every page\n    if ($lazy) {\n        $lazy_register = SmartyLazyRegister::getInstance();\n        $lazy_register->register($params);\n\n        if (is_array($params)) {\n            $params = $params[1];\n        }\n\n        // SmartyLazyRegister allows to only load external class when they are needed\n        $smarty->registerPlugin($type, $function, array($lazy_register, $params));\n    } else {\n        $smarty->registerPlugin($type, $function, $params);\n    }\n}\n\nfunction smartyHook($params, &$smarty)\n{\n    if (!empty($params['h'])) {\n        $id_module = null;\n        $hook_params = $params;\n        $hook_params['smarty'] = $smarty;\n        if (!empty($params['mod'])) {\n            $module = Module::getInstanceByName($params['mod']);\n            if ($module && $module->id) {\n                $id_module = $module->id;\n            } else {\n                return '';\n            }\n            unset($hook_params['mod']);\n        }\n        unset($hook_params['h']);\n        return Hook::exec($params['h'], $hook_params, $id_module);\n    }\n}\n\nfunction smartyCleanHtml($data)\n{\n    // Prevent xss injection.\n    if (Validate::isCleanHtml($data)) {\n        return $data;\n    }\n}\n\nfunction toolsConvertPrice($params, &$smarty)\n{\n    return Tools::convertPrice($params['price'], Context::getContext()->currency);\n}\n\n/**\n * Used to delay loading of external classes with smarty->register_plugin\n */\nclass SmartyLazyRegister\n{\n    protected $registry = array();\n    protected static $instance;\n\n    /**\n     * Register a function or method to be dynamically called later\n     * @param string|array $params function name or array(object name, method name)\n     */\n    public function register($params)\n    {\n        if (is_array($params)) {\n            $this->registry[$params[1]] = $params;\n        } else {\n            $this->registry[$params] = $params;\n        }\n    }\n\n    /**\n     * Dynamically call static function or method\n     *\n     * @param string $name function name\n     * @param mixed $arguments function argument\n     * @return mixed function return\n     */\n    public function __call($name, $arguments)\n    {\n        $item = $this->registry[$name];\n\n        // case 1: call to static method - case 2 : call to static function\n        if (is_array($item[1])) {\n            return call_user_func_array($item[1].'::'.$item[0], array($arguments[0], &$arguments[1]));\n        } else {\n            $args = array();\n\n            foreach ($arguments as $a => $argument) {\n                if ($a == 0) {\n                    $args[] = $arguments[0];\n                } else {\n                    $args[] = &$arguments[$a];\n                }\n            }\n\n            return call_user_func_array($item, $args);\n        }\n    }\n\n    public static function getInstance()\n    {\n        if (!self::$instance) {\n            self::$instance = new SmartyLazyRegister();\n        }\n        return self::$instance;\n    }\n}\n",
+			"file": "config/smarty.config.inc.php",
+			"file_size": 10340,
+			"file_write_time": 131415829477621988,
+			"settings":
+			{
+				"buffer_size": 10425,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/config.inc.php",
+			"settings":
+			{
+				"buffer_size": 10152,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Resources/Modificaciones.sh",
+			"settings":
+			{
+				"buffer_size": 1322,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "themes/default-bootstrap/contact-form.tpl",
+			"settings":
+			{
+				"buffer_size": 10648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/admin/AdminOrdersController.php",
+			"settings":
+			{
+				"buffer_size": 149491,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/front/StoresController.php",
+			"settings":
+			{
+				"buffer_size": 10764,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "themes/default-bootstrap/js/stores.js",
+			"settings":
+			{
+				"buffer_size": 8654,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "admin5970mnptj/themes/default/template/controllers/orders/helpers/view/view.tpl",
+			"settings":
+			{
+				"buffer_size": 58157,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 514.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp2/htdocs/prestashop6_final2",
+		"/D/xampp2/htdocs/prestashop6_final2/modules",
+		"/D/xampp2/htdocs/prestashop6_final2/Resources",
+		"/D/xampp2/htdocs/prestashop6_final2/themes",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap",
+		"/D/xampp2/htdocs/prestashop6_final2/translations",
+		"/D/xampp2/htdocs/prestashop6_final2/translations/es"
+	],
+	"file_history":
+	[
+		"/D/xampp2/htdocs/prestashop6_final2/modules/blockfacebook/blockfacebook.tpl",
+		"/D/xampp2/php/php.ini",
+		"/D/xampp2/htdocs/prestashop6_final2/prestashop6_final2.sublime-project",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/lang/es.php",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/contact-form.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/css/global.css",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/header.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/addresses.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/translations/en.gzip",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap-mio/footer.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/footer.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/modules/blockcms/blockcms.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/css/modules/blockcontact/blockcontact.css",
+		"/D/xampp2/htdocs/prestashop6_final2/modules/homeslider/homeslider.php",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/modules/homeslider/homeslider.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/modules/homeslider/views/templates/hook/homeslider.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/modules/themeconfigurator/css/theme2.css",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/css/modules/blockcart/blockcart.css",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/css/modules/homeslider/homeslider.css",
+		"/D/xampp2/htdocs/prestashop6_final2/config/defines.inc.php",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/css/style.css",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/global.tpl",
+		"/D/xampp2/htdocs/prestashop6_final2/modules/homeslider/HomeSlide.php",
+		"/D/xampp2/htdocs/prestashop6_final2/themes/default-bootstrap/css/modules/blocktopmenu/css/superfish-modified.css",
+		"/D/xampp2/htdocs/prestashop6_final2/modules/homeslider/js/homeslider.js",
+		"/D/xampp2/htdocs/prestashop6_2/modules/fotocliente/controllers/front/fotos.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/clavoliketutorial/view/js/clavoliketutorial_back.js",
+		"/D/xampp2/htdocs/prestashop6_2/modules/clavoliketutorial/clavoliketutorial.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/fotocliente/views/templates/hook/getContent.tpl",
+		"/D/xampp2/htdocs/prestashop6_2/modules/mimodulo/mimodulo.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/fotocliente/Fotocliente.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/moduletesting/moduletesting.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/moduletesting/moduletesting.tpl",
+		"/D/xampp2/htdocs/prestashop6_2/modules/moduletesting/moduletesting_page.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/moduletesting/moduletesting_page.tpl",
+		"/D/xampp2/htdocs/prestashop6_2/modules/mimodulo/views/templates/hook/mimodulo.tpl",
+		"/D/xampp2/htdocs/prestashop6_2/modules/mimodulo/prueba.tpl",
+		"/D/xampp2/htdocs/prestashop6_2/modules/mimodulo/config.xml",
+		"/D/xampp2/htdocs/prestashop6_2/modules/appagebuilder/controllers/admin/AdminApPageBuilder.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/controllers/admin/index.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/leoslideshow.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/classes/LeoSlideshowSlide.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/fotocliente/views/templates/hook/getConten.tpl",
+		"/D/xampp2/htdocs/prestashop6_2/modules/appagebuilder/views/templates/hook/ApSlideShow.tpl",
+		"/D/xampp2/htdocs/prestashop6_2/tools/profiling/Tools.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/controllers/index.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/classes/LeoSlideshowGroup.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/controllers/admin/AdminLeoSlideshow.php",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/config.xml",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/config_es.xml",
+		"/D/xampp2/htdocs/prestashop6_2/modules/leoslideshow/classes/LeoSlideshowHelper.php",
+		"/C/Users/Administrador/Desktop/3ta.html",
+		"/E/xampp2/htdocs/laravel_5.2/index.php",
+		"/E/xampp2/htdocs/laravel_5.2/config/config.php",
+		"/E/xampp2/htdocs/laravel_5.2/resources/views/admin/usuarios/create.blade.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Http/routes.php",
+		"/E/xampp2/htdocs/laravel_5.2/resources/views/admin/usuarios/edit.blade.php",
+		"/E/xampp2/htdocs/laravel_5.2/resources/views/admin/usuarios/edit_bacup.blade.php",
+		"/E/xampp2/htdocs/laravel_5.2/resources/views/admin/template/main-lte.blade.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Http/Controllers/UsuariosController.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Http/Requests/UsuarioRequest.php",
+		"/E/xampp2/htdocs/web-corporacion/DB/firebase.php",
+		"/E/xampp2/htdocs/web-corporacion/DB/suscripciones.php",
+		"/E/xampp2/htdocs/web-corporacion/template-01/js/funciones.js",
+		"/E/xampp2/htdocs/web-corporacion/Librerias/NoDBClass.php",
+		"/E/xampp2/htdocs/web-corporacion/no_sirve.php",
+		"/E/xampp2/htdocs/web-corporacion/modelo/DB_lite.php",
+		"/E/xampp2/htdocs/web-corporacion/Librerias/StringClass.php",
+		"/E/xampp2/htdocs/web-corporacion/Funciones.php",
+		"/E/xampp2/htdocs/web-corporacion/Librerias/TokenFunctions.php",
+		"/E/xampp2/htdocs/web-corporacion/test_mail.php",
+		"/E/xampp2/htdocs/web-corporacion/config/load.php",
+		"/E/xampp2/htdocs/web-corporacion/send_mail.php",
+		"/E/xampp2/htdocs/web-corporacion/template-01/modal_cesar/modal_cesar.js",
+		"/E/xampp2/htdocs/web-corporacion/template-01/modal_cesar/modal_cesar.css",
+		"/E/xampp2/htdocs/web-corporacion/body_left.php",
+		"/E/alfavia-amazon-ws/SIGAE/class/logic/class.Utils.php",
+		"/E/xampp2/htdocs/web-corporacion/web.html",
+		"/E/xampp2/htdocs/laravel_5.2/vendor/laracasts/flash/src/views/message.blade_bacup.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_123840_create_usuarios_rols_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_195802_create_rols_recursos_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Usuario_Rol.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Rol_Recurso.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Providers/AppServiceProvider.php",
+		"/E/xampp2/htdocs/laravel_5.2/.htaccess_bacup",
+		"/E/xampp2/htdocs/laravel_5.2/public/phpinfo.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Usuario_Rols.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_17_112119_create_usuarios_roles_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_17_162037_create_categorias_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Categoria.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_124727_create_articulos_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_17_110337_create_usuarios_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_123345_create_rols_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_124228_create_categorias_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Rol.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/User.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_173453_create_recursos_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_173459_create_rols_recursos_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_21_184829_create_rols_recurso_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_17_111825_create_roles_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/app/Usuario.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_17_172037_create_articulos_table.php",
+		"/E/xampp2/htdocs/laravel_5.2/public/index.php",
+		"/E/xampp2/htdocs/laravel_5.2/foo.php",
+		"/E/xampp2/htdocs/laravel_5.2/.htaccess",
+		"/E/xampp2/htdocs/laravel_5.2/public/.htaccess",
+		"/E/xampp2/htdocs/laravel_5.2/.env",
+		"/E/xampp2/htdocs/laravel_5.2/config/app.php",
+		"/E/xampp2/htdocs/zf/PROYECTO/module/Tienda/view/layout/layout_lte.phtml",
+		"/E/xampp2/htdocs/zf/PROYECTO/public/index.php",
+		"/E/xampp2/htdocs/zf/PROYECTO/config/config.php",
+		"/E/xampp2/htdocs/laravel_5.2/database/migrations/2016_11_17_112255_create_ususarios_roles_table.php",
+		"/E/xampp2/htdocs/laravelDemo/resources/views/admin/template/main-lte.blade.php",
+		"/E/xampp2/htdocs/laravelDemo/resources/views/prueba/index.blade.php",
+		"/E/xampp2/htdocs/laravelDemo/public/index.php",
+		"/E/xampp2/htdocs/laravelDemo/resources/views/errors/503.blade.php",
+		"/E/xampp2/htdocs/laravelDemo/app/Articulo.php",
+		"/E/xampp2/htdocs/laravelDemo/app/Http/Controllers/UserController.php",
+		"/E/xampp2/htdocs/laravelDemo/database/migrations/2016_11_14_193434_create_articulos_table.php",
+		"/E/xampp2/htdocs/laravelDemo/database/migrations/2016_11_14_194106_create_images_table.php",
+		"/E/xampp2/htdocs/laravelDemo/database/migrations/2016_11_14_194440_create_tags_table.php",
+		"/E/xampp2/htdocs/laravelDemo/app/Categoria.php",
+		"/E/xampp2/htdocs/laravelDemo/app/Genero.php",
+		"/E/xampp2/htdocs/laravelDemo/app/User.php",
+		"/E/xampp2/htdocs/laravelDemo/app/Http/routes.php",
+		"/E/xampp2/htdocs/laravelDemo/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/E/xampp2/htdocs/laravelDemo/app/Image.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\modules",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\themes\\default-bootstrap",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\modules",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\themes\\default-bootstrap",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\modules\\homeslider",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\themes\\default-bootstrap",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\modules\\homeslider",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\modules",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\themes",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\modules",
+			"D:\\xampp2\\htdocs\\prestashop6_final2",
+			"D:\\xampp2\\htdocs\\prestashop6_final2\\themes",
+			"D:\\xampp2\\htdocs\\prestashop6_2\\modules\\leoslideshow",
+			"E:\\xampp2\\htdocs\\test",
+			"E:\\xampp2\\htdocs\\laravel_5.2",
+			"E:\\xampp2\\htdocs",
+			"<project>",
+			"E:\\xampp2\\htdocs\\*.php"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"maps.googleapis.com",
+			"PS_CATALOG_MODE",
+			"__PS_BASE_URI__",
+			"form",
+			"attribute_label",
+			"Size",
+			"pedir",
+			"solicitar",
+			"pedir",
+			"SOLUSYSTEM",
+			"_SOLUSYSTEM_WEB_",
+			"_SOLUSYSTEM_WEB_THEME_",
+			"Add to cart",
+			"max_input_var",
+			"_PS_SMARTY_DIR_",
+			"marty.class.php",
+			"_PS_SMARTY_DIR_",
+			"<h3 class=\"page-subheading\">",
+			"<div id=\"center_column\" class=\"center_column",
+			"cmsinfo_block",
+			"<div id=\"facebook_block\" ",
+			"class=\"bottom-footer",
+			"Software",
+			"software para",
+			"software",
+			"para ",
+			"http://www.prestashop.com",
+			"#homepage-slider .btn-default",
+			"#homepage-slider .bx-wrapper .bx-controls-direction a",
+			"#homepage-slider .bx-wrapper .bx-controls-direction",
+			"#homepage-slider .bx-wrapper .bx-controls-direction a",
+			"block .title_block",
+			"block .title_block, .block h4",
+			"779",
+			"homeslider.js",
+			"class=\"bx-wrapper\"",
+			"homeslider_slides",
+			"homepage-slider",
+			"select",
+			"formAtts",
+			"Content",
+			"getContext",
+			"getContent",
+			"front_office_features",
+			"str_replace",
+			"replace",
+			"filetype",
+			"hideModalSuscripcion",
+			".error",
+			"msj_error",
+			"suscripcion_popup",
+			"modal_enviando",
+			"objFun",
+			"getCartaVenta",
+			"file_get_contents",
+			"beginNewsletterForm",
+			"Requests",
+			"('flash::messag",
+			"w3",
+			"sendFormularioProducto",
+			"w3",
+			"$usuario",
+			"usuario",
+			"config/config.php",
+			"showMessage",
+			"$row",
+			"row",
+			"sendFormularioProducto",
+			"@endsection",
+			"php",
+			"<?php echo $this->basePath() ?>",
+			"footer-distributed",
+			"fa-spin",
+			".fa",
+			"loader-item",
+			"pageloader",
+			":</",
+			"parnerts-carousel",
+			"sendFormPadre",
+			"suscripcion_popup",
+			"ocultar",
+			"fancybox",
+			"suscripcion_popup"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$entidad",
+			"entidad",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 11,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "themes/default-bootstrap/product-list.tpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10382,
+								10439
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										10438,
+										10439
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										10382,
+										10383
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Smarty/Syntaxes/Smarty.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3547.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "themes/default-bootstrap/product.tpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 42832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12607,
+								12607
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Smarty/Syntaxes/Smarty.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5219.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/defines.inc.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7289,
+								7289
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3618.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 324,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										205,
+										215
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								210,
+								210
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										242,
+										243
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										186,
+										187
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"default_dir": "D:\\xampp2\\htdocs\\prestashop6_final2",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/smarty.config.inc.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1150,
+								1150
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 305.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config/config.inc.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3812,
+								3812
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 828.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Resources/Modificaciones.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								710,
+								680
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "themes/default-bootstrap/contact-form.tpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4389,
+								4472
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										4489,
+										4490
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										4388,
+										4389
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Smarty/Syntaxes/Smarty.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1890.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "controllers/admin/AdminOrdersController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 149491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13385,
+								13424
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										13424,
+										13425
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/single_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										13319,
+										13320
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6065.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "controllers/front/StoresController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10764,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10600,
+								10639
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										10647,
+										10648
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/single_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										10552,
+										10553
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4949.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "themes/default-bootstrap/js/stores.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7399,
+								7399
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										7785,
+										7786
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										6793,
+										6794
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3257.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "admin5970mnptj/themes/default/template/controllers/orders/helpers/view/view.tpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 58157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57088,
+								57088
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+									"1":
+									[
+										57633,
+										57634
+									]
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Smarty/Syntaxes/Smarty.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 28277.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 31.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/php_exe_consola.sublime-build",
+	"project": "prestashop6_final2.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"template/controllers/orders/helpers/view/view.tpl",
+				"admin5970mnptj\\themes\\default\\template\\controllers\\orders\\helpers\\view\\view.tpl"
+			],
+			[
+				"emes/default-bootstrap/js/stores.js",
+				"themes\\default-bootstrap\\js\\stores.js"
+			],
+			[
+				"s/front/storescontroller.php",
+				"controllers\\front\\StoresController.php"
+			],
+			[
+				"admin/adminorderscontroller.php",
+				"controllers\\admin\\AdminOrdersController.php"
+			],
+			[
+				"default-bootstrap/contact-form",
+				"themes\\default-bootstrap\\contact-form.tpl"
+			],
+			[
+				"themes/default-bootstrap/css/global.css",
+				"themes\\default-bootstrap\\css\\global.css"
+			],
+			[
+				"css/modules/blockcontact/blockcontact.css",
+				"themes\\default-bootstrap\\css\\modules\\blockcontact\\blockcontact.css"
+			],
+			[
+				"default-bootstrap/css/modules/blockcart/blockcart.css",
+				"themes\\default-bootstrap\\css\\modules\\blockcart\\blockcart.css"
+			],
+			[
+				"modules/themeconfigurator/css/theme2.css",
+				"modules\\themeconfigurator\\css\\theme2.css"
+			],
+			[
+				"themes/default-bootstrap/css/modules/homeslider/homeslider.css",
+				"themes\\default-bootstrap\\css\\modules\\homeslider\\homeslider.css"
+			],
+			[
+				"appagebuilder/views/templates/hook/apslideshow",
+				"modules\\appagebuilder\\views\\templates\\hook\\ApSlideShow.tpl"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,30 @@
+#mas: http://aprendegit.com/tag/gitignore/
+
+
+# Ignora los ficheros bg-01.jpg bg-lt.jpg
+#
+# No ignora los ficheros bg-1.jpg y bg-001.jpg
+#
+#bg-??.jpg
+
+
+# Ignora las carpetas pesadas de configuracion
+#/vendor/*
+#vendor/*
+#/node_modules
+#/public/storage
+#.env
+
+
+
+
+# Ignora los ficheros *.o y *.a *.zip
+*.[ao]
+*.zip
+*.rar
+
+# Ignorar el contenido de las carpetas log y cache
+#cache/
+#log/
+cache/smarty/cache/*
+cache/smarty/compile/*

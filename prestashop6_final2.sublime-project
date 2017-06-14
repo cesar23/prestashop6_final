@@ -1,0 +1,42 @@
+{
+	"folders":
+	[
+		// {
+  //           "follow_symlinks": true,
+  //           "path": "config/",          
+           
+  //       },
+  //       {
+  //           "follow_symlinks": true,
+  //           "path": "Adapter/",          
+           
+  //       },
+
+/*---------Ocultar Todos menos Core,cache-------*/
+         {
+            "path": ".",
+            "folder_exclude_patterns": [
+              "Adapter",
+              "Core",
+              "cache",
+              "classes",
+              //"localization",
+              "mails",
+              "DB-Bacup",
+              "tools",
+              "override",
+              //"Resources",
+              //"translations",
+              "pdf",
+              "download",
+              "docs",
+              "log",
+              "webservice"],
+           
+            "follow_symlinks": true
+        },
+
+   
+
+	]
+}
