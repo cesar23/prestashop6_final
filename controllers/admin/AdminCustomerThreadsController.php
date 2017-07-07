@@ -734,7 +734,8 @@ class AdminCustomerThreadsControllerCore extends AdminController
             if (Validate::isLoadedObject($product)) {
                 $content .= '<br/>'.$this->l('Product: ').'<span class="label label-info">'.$product->name.'</span><br/><br/>';
             }
-            $content .= Tools::safeOutput($message['message']);
+            //$content .= Tools::safeOutput($message['message']);
+             $content .= ($message['message']);
 
             $timeline[$message['date_add']][] = array(
                 'arrow' => 'left',

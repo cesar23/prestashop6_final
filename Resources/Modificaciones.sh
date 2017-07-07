@@ -33,4 +33,7 @@ _SOLUSYSTEM_COPYRIGHT_
 #----------------------------para el formulario
 D:\xampp2\htdocs\prestashop6_final2\admin5970mnptj\themes\default\template\controllers\customer_threads\helpers\view\message.tpl:82
 D:\xampp2\htdocs\prestashop6_final2\controllers\front\ContactController.php
-D:\xampp2\htdocs\prestashop6_final2\themes\default-bootstrap\contact-form.tpl								
+D:\xampp2\htdocs\prestashop6_final2\themes\default-bootstrap\contact-form.tpl
+D:\xampp2\htdocs\prestashop6_final2\admin5970mnptj\themes\default\template\controllers\customer_threads\helpers\view\timeline_item.tpl
+D:\xampp2\htdocs\prestashop6_final2\controllers\admin\AdminCustomerThreadsController.php:738
+D:\xampp2\htdocs\prestashop6_final2\admin5970mnptj\themes\default\template\controllers\customer_threads\message.tpl								

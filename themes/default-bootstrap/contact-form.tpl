@@ -223,7 +223,7 @@ async defer></script>
 			</div>
 		</div>
 
-		<input class="form-control grey" type="text" name="id_order" id="id_order" value="" readonly="readonly" />
+		<input class="form-control grey" type="hidden" name="id_order" id="id_order" value="" readonly="readonly" />
 		<input class="form-control grey" type="hidden" name="tipo_form" id="tipo_form" value="{$tipo_form}"  />
 		
 
@@ -235,7 +235,7 @@ async defer></script>
 </form>
 
 <!-- end formulario reclamaciones  -->
-por defecto libro_reclamaciones
+
 
 {elseif $tipo_form=='formulario'}
 
