@@ -122,7 +122,7 @@
 					<i class="icon-reorder"></i>
 				</button>
 				<a id="header_shopversion" href="{$default_tab_link|escape:'html':'UTF-8'}">
-					<span id="shop_version">{$version}</span>
+					<span id="shop_version" style="margin: 0px 0px 0px 38px;">{$version}</span>
 				</a>
 				{* Shop *}
 				{if isset($is_multishop) && $is_multishop && $shop_list && (isset($multishop_context) && $multishop_context & Shop::CONTEXT_GROUP || $multishop_context & Shop::CONTEXT_SHOP)}
@@ -297,13 +297,23 @@
 {/if}
 				<ul id="header_employee_box">
 					{if (!isset($logged_on_addons) || !$logged_on_addons) && (isset($display_addons_connection) && $display_addons_connection)}
-						<li class="hidden-sm hidden-xs">
+						{* 
+
+					<li class="hidden-sm hidden-xs">
 							<a href="#" class="addons_connect toolbar_btn" data-toggle="modal" data-target="#modal_addons_connect" title="{l s='Connect to PrestaShop Marketplace account'}">
 								<i class="icon-chain-broken"></i>
 								<span class="string-long">{l s='Connect to PrestaShop Marketplace account'}</span>
 								<span class="string-short">{l s='PrestaShop Marketplace'}</span>
 							</a>
 						</li>
+						*}
+						<li class="hidden-sm hidden-xs">
+						<a href="http://solucionessystem.com/" target="_blankk" class="addons_connect toolbar_btn">
+								<i class="icon-chain-broken"></i>
+								<span class="string-long">{l s='ir a la pagina del Creador'}</span>								
+							</a>
+							</li>
+
 					{/if}
 {if {$base_url}}
 					<li>

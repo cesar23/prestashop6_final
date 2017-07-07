@@ -29,3 +29,8 @@ _SOLUSYSTEM_COPYRIGHT_
 										<img class="img-responsive" id="thumb_24" src="http://localhost/prestashop6_final2/24-cart_default/dragoncito.jpg" alt="Dragoncito" title="Dragoncito" height="80" width="80" itemprop="image">
 									</a>
 								</li>
+
+#----------------------------para el formulario
+D:\xampp2\htdocs\prestashop6_final2\admin5970mnptj\themes\default\template\controllers\customer_threads\helpers\view\message.tpl:82
+D:\xampp2\htdocs\prestashop6_final2\controllers\front\ContactController.php
+D:\xampp2\htdocs\prestashop6_final2\themes\default-bootstrap\contact-form.tpl								

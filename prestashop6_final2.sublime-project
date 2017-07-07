@@ -19,9 +19,9 @@
               "Adapter",
               "Core",
               "cache",
-              "classes",
+              //"classes",
               //"localization",
-              "mails",
+              //"mails",
               "DB-Bacup",
               "tools",
               "override",
@@ -32,11 +32,36 @@
               "docs",
               "log",
               "webservice"],
+            "file_exclude_patterns": ["*.zip","*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store",  "*.psd"],
            
             "follow_symlinks": true
         },
+        //------creamos un directorio virtual para  trabajaar solo para el
+            {
+            "path": "modules/soluwidget1/",
+            "name": "soluwidget1",
+            
+        },
+         {
+            "path": "modules/homeslider/",
+            "name": "homeslider",
+            
+        },
+         {
+            "path": "modules/soluanalytics/",
+            "name": "trabajo_Sobre_modulo",
+            
+        },
+           {
+            "path": "themes/default-bootstrap/",
+            "name": "default-bootstrap",
+            
+        },
+
 
    
 
 	]
+ 
+
 }

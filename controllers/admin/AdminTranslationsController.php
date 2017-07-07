@@ -3132,7 +3132,8 @@ class AdminTranslationsControllerCore extends AdminController
         } else {
             $email_file = _PS_ROOT_DIR_.$email;
         }
-
+        //$email_file=realpath($email_file);
+        
         $email_html = file_get_contents($email_file);
 
         return $email_html;

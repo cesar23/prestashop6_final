@@ -1,0 +1,16 @@
+.soluwidget1_titulo{
+	    font-size: 17px;
+    line-height: 7px;
+    /* color: #3a3939; */
+    margin-bottom: 0;
+    font-weight: 100;
+}
+
+.soluwidget1_left_contenido  img {
+    border: none;
+    border: 1px solid #d6d4d4;
+}
+.soluwidget1_left_contenido a img {
+    border: none;
+    border: 1px solid #d6d4d4;
+}

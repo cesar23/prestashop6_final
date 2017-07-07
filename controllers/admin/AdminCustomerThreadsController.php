@@ -337,6 +337,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 				');
                 $output = $this->displayMessage($messages, true, (int)Tools::getValue('id_employee_forward'));
                 $cm = new CustomerMessage();
+
                 $cm->id_employee = (int)$this->context->employee->id;
                 $cm->id_customer_thread = (int)Tools::getValue('id_customer_thread');
                 $cm->ip_address = (int)ip2long(Tools::getRemoteAddr());
@@ -560,6 +561,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
             return;
         }
 
+
         $this->context = Context::getContext();
         if (!($thread = $this->loadObject())) {
             return;
@@ -569,6 +571,8 @@ class AdminCustomerThreadsControllerCore extends AdminController
         $employees = Employee::getEmployees();
 
         $messages = CustomerThread::getMessageCustomerThreads($id_customer_thread);
+
+
 
         foreach ($messages as $key => $mess) {
             if ($mess['id_employee']) {
@@ -687,6 +691,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
                 $contact = $c['name'];
             }
         }
+
 
         $this->tpl_view_vars = array(
             'id_customer_thread' => $id_customer_thread,

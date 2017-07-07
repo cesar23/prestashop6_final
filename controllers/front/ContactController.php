@@ -38,7 +38,50 @@ class ContactControllerCore extends FrontController
         if (Tools::isSubmit('submitMessage')) {
             $extension = array('.txt', '.rtf', '.doc', '.docx', '.pdf', '.zip', '.png', '.jpeg', '.gif', '.jpg');
             $file_attachment = Tools::fileAttachment('fileUpload');
-            $message = Tools::getValue('message'); // Html entities is not usefull, iscleanHtml check there is no bad html tags.
+
+            $message ="";
+            //--------si es el formulario de reclamaciones
+            if (isset($_POST['tipo_form']) && $_POST['tipo_form']=="libro_reclamaciones") {
+
+                if (isset($_POST['fecha']) && $_POST['fecha']!="") {
+                   $message .="[^espacio] [^b]fecha:[^/b] ".Tools::getValue('fecha');            
+               }
+               if (isset($_POST['nombre']) && $_POST['nombre']!="") {
+                   $message .="[^espacio] [^b]nombre:[^/b] ".Tools::getValue('nombre');            
+               }
+               if (isset($_POST['domicilio']) && $_POST['domicilio']!="") {
+                   $message .="[^espacio] [^b]domicilio:[^/b] ".Tools::getValue('domicilio');            
+               }
+               if (isset($_POST['dnice']) && $_POST['dnice']!="") {
+                   $message .="[^espacio] [^b]dni:[^/b] ".Tools::getValue('dnice');            
+               }
+               if (isset($_POST['telefono']) && $_POST['telefono']!="") {
+                   $message .="[^espacio] [^b]telefono:[^/b] ".Tools::getValue('telefono');            
+               }
+               if (isset($_POST['email']) && $_POST['email']!="") {
+                   $message .="[^espacio] [^b]email:[^/b] ".Tools::getValue('email');            
+               }
+               if (isset($_POST['apoderado']) && $_POST['apoderado']!="") {
+                   $message .="[^espacio] [^b]apoderado:[^/b] ".Tools::getValue('apoderado');            
+               }
+               if (isset($_POST['tipo_de_producto_contratado']) && $_POST['tipo_de_producto_contratado']!="") {
+                   $message .="[^espacio] [^b]Tipo de producto contratado:[^/b] ".Tools::getValue('tipo_de_producto_contratado');            
+               }
+               if (isset($_POST['descripcion_del_bien_contratado']) && $_POST['descripcion_del_bien_contratado']!="") {
+                   $message .="[^espacio] [^b]Descripci&oacute;n del bien contratado:[^/b] ".Tools::getValue('descripcion_del_bien_contratado');            
+               }
+               if (isset($_POST['monto_del_bien_contratado']) && $_POST['monto_del_bien_contratado']!="") {
+                   $message .="[^espacio] [^b]Monto del bien contratado:[^/b] ".Tools::getValue('monto_del_bien_contratado');            
+               }
+               if (isset($_POST['detalle_de_la_reclamacion']) && $_POST['detalle_de_la_reclamacion']!="") {
+                   $message .="[^espacio] [^b]Detalle de la Reclamaci&oacute;n:[^/b] ".Tools::getValue('detalle_de_la_reclamacion');           
+               }
+                $message .="[^espacio]";
+         }
+         //----------
+
+
+            $message .= Tools::getValue('message'); // Html entities is not usefull, iscleanHtml check there is no bad html tags.
             if (!($from = trim(Tools::getValue('from'))) || !Validate::isEmail($from)) {
                 $this->errors[] = Tools::displayError('Invalid email address.');
             } elseif (!$message) {
@@ -97,6 +140,12 @@ class ContactControllerCore extends FrontController
                         }
                     }
                 }
+
+
+                $search = array("[^espacio]", "[^b]", "[^/b]");
+                $replace   = array("<br>", "<b>", "</b>");
+
+                $message = str_replace($search, $replace, $message);
                 $old_message = Db::getInstance()->getValue('
 					SELECT cm.message FROM '._DB_PREFIX_.'customer_message cm
 					LEFT JOIN '._DB_PREFIX_.'customer_thread cc on (cm.id_customer_thread = cc.id_customer_thread)
@@ -155,11 +204,15 @@ class ContactControllerCore extends FrontController
                     }
                 }
 
+
+              
+
                 if (!count($this->errors)) {
                     $var_list = array(
                                     '{order_name}' => '-',
                                     '{attached_file}' => '-',
-                                    '{message}' => Tools::nl2br(stripslashes($message)),
+                                    //'{message}' => Tools::nl2br(stripslashes($message)),
+                                     '{message}' => pSQL(stripslashes($message),true),
                                     '{email}' =>  $from,
                                     '{product_name}' => '',
                                 );
@@ -246,11 +299,21 @@ class ContactControllerCore extends FrontController
             }
             $this->context->smarty->assign('customerThread', $customer_thread);
         }
+        //------------
+ //$this->context->controller->addJS(_PS_JS_DIR_.'jquery/ui/jquery.ui.button.min.js');
+      
+        $this->context->controller->addJQueryUI('ui.datepicker');
+        $this->context->controller->addCSS(_PS_CSS_DIR_.'jquery-ui-1.8.10.custom.css');
+         $this->context->controller->addJS(_PS_JS_DIR_.'jquery/plugins/jquery.validate.js');
+        //------------
+        $tipo_form=(Tools::getValue('tipo_form'))?(Tools::getValue('tipo_form')):'';
 
         $this->context->smarty->assign(array(
             'contacts' => Contact::getContacts($this->context->language->id),
-            'message' => html_entity_decode(Tools::getValue('message'))
+            'message' => html_entity_decode(Tools::getValue('message')),
+                'tipo_form' => html_entity_decode($tipo_form),
         ));
+
 
         $this->setTemplate(_PS_THEME_DIR_.'contact-form.tpl');
     }

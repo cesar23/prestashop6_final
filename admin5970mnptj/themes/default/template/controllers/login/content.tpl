@@ -25,7 +25,8 @@
 <div id="login-panel">
 	<div id="login-header">
 		<h1 class="text-center">
-			<img id="logo" src="{$img_dir}prestashop@2x.png" width="123px" height="24px" alt="PrestaShop" />
+			
+			<img id="logo" src="{$img_dir}prestashop@2x.png"  alt="Soluciones system" />
 		</h1>
 		<div class="text-center">{$ps_version}</div>
 		<div id="error" class="hide alert alert-danger">
@@ -49,7 +50,7 @@
 		<div class="alert alert-warning">{$warningSslMessage}</div>
 		{/if}
 	</div>
-	<div id="shop-img"><img src="{$img_dir}preston-login@2x.png" alt="{$shop_name}" width="69.5px" height="118.5px" /></div>
+	<div id="shop-img"><img src="{$img_dir}preston-login@2x.png" alt="{$shop_name}" width="119px" height="119px" /></div>
 	<div class="flip-container">
 		<div class="flipper">
 			<div class="front panel">
@@ -135,21 +136,19 @@
 	{hook h="displayAdminLogin"}
 	<div id="login-footer">
 		<p class="text-center text-muted">
-			<a href="http://www.prestashop.com/" onclick="return !window.open(this.href);">
-				&copy; PrestaShop&#8482; 2007-{$smarty.now|date_format:"%Y"} - All rights reserved
+			<a href="http://www.solucionessystem.com/" onclick="return !window.open(this.href);">
+				&copy; SolucionesSystem&#8482; 2010-{$smarty.now|date_format:"%Y"} - Derechos reservados
 			</a>
 		</p>
 		<p class="text-center">
-			<a class="link-social link-twitter _blank" href="https://twitter.com/PrestaShop" title="Twitter">
+			<a class="link-social link-twitter _blank" href="https://twitter.com/SoluSystemPeru" title="Twitter">
 				<i class="icon-twitter"></i>
 			</a>
-			<a class="link-social link-facebook _blank" href="https://www.facebook.com/prestashop" title="Facebook">
+			<a class="link-social link-facebook _blank" href="https://www.facebook.com/solucionessystemperu/" title="Facebook">
 				<i class="icon-facebook"></i>
 			</a>
-			<a class="link-social link-github _blank" href="https://www.prestashop.com/github" title="Github">
-				<i class="icon-github"></i>
-			</a>
-			<a class="link-social link-google _blank" href="https://plus.google.com/+prestashop/" title="Google">
+			
+			<a class="link-social link-google _blank" href="https://plus.google.com/u/0/communities/108741224813964410971" title="Google">
 				<i class="icon-google-plus"></i>
 			</a>
 		</p>

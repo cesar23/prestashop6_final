@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/es/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/es/blog/feed.xml</link>
+    <description></description>
+    <language>es</language>
+     <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Gastos de envío gratuitos ¿Qué estrategia adoptar?</title>
+    <link>https://www.prestashop.com/es/blog/gastos-de-envio-gratuitos-que-estrategia-adoptar</link>
+    <description>By Boxtal</description>
+     <pubDate>Thu, 29 Jun 2017 12:32:52 +0200</pubDate>
+ <dc:creator>jimmy</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/gastos-de-envio-gratuitos-que-estrategia-adoptar</guid>
+  </item>
+  <item>
+    <title>Premios PrestaShop 2017: repaso a las tiendas online ganadoras</title>
+    <link>https://www.prestashop.com/es/blog/ganadores-premios-prestashop</link>
+    <description> </description>
+     <pubDate>Thu, 29 Jun 2017 12:01:12 +0200</pubDate>
+ <dc:creator>cdeguingand</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/ganadores-premios-prestashop</guid>
+  </item>
+  <item>
+    <title>Caso de éxito Drim: las opiniones de clientes, clave de éxito en sectores maduros</title>
+    <link>https://www.prestashop.com/es/blog/drim-opiniones-de-clientes-como-clave-de-exito</link>
+    <description> 
+</description>
+     <pubDate>Mon, 26 Jun 2017 16:34:25 +0200</pubDate>
+ <dc:creator>laia.ordonez</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/drim-opiniones-de-clientes-como-clave-de-exito</guid>
+  </item>
+  <item>
+    <title>La Sirena y la logística online de los congelados</title>
+    <link>https://www.prestashop.com/es/blog/caso-de-exito/la-sirena-y-la-logistica-online-de-los-congelados</link>
+    <description> 
+Entrevista con Xavier Budet, Director de Logística de La Sirena, en la que hablamos de las claves a considerar en la logística online del sector de los congelados.
+ </description>
+     <pubDate>Fri, 23 Jun 2017 17:16:24 +0200</pubDate>
+ <dc:creator>laia.ordonez</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/caso-de-exito/la-sirena-y-la-logistica-online-de-los-congelados</guid>
+  </item>
+  <item>
+    <title>4 Consejos para optimizar tus promociones con PrestaShop</title>
+    <link>https://www.prestashop.com/es/consejos-e-commerce/consejos-optimizar-promociones</link>
+    <description>Realizar promociones especiales en fechas señaladas del año es una de las técnicas más utilizadas por las empresas de e-Commerce.</description>
+     <pubDate>Mon, 19 Jun 2017 11:06:47 +0200</pubDate>
+ <dc:creator>Cécile Dubouis</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/consejos-e-commerce/consejos-optimizar-promociones</guid>
+  </item>
+  <item>
+    <title>Descubre más sobre Claudia, Embajadora del mes | Junio 2017	</title>
+    <link>https://www.prestashop.com/es/blog/prestashop-ambassadors/clone-of-meet-claudia-ambassador-of-the-month-june-2017</link>
+    <description>Claudia es nuestra embajadora en Monterrey, México, y organiza eventos frecuentemente en su ciudad, siempre está dispuesta a dar una plática sobre PrestaShop.</description>
+     <pubDate>Fri, 16 Jun 2017 14:12:58 +0200</pubDate>
+ <dc:creator>Manon Plommet</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/prestashop-ambassadors/clone-of-meet-claudia-ambassador-of-the-month-june-2017</guid>
+  </item>
+  <item>
+    <title>Presentamos MailChimp para PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/actualidad-prestashop/presentamos-mailchimp-para-prestashop-0</link>
+    <description>¡Ya puedes conectar tu tienda PrestaShop a MailChimp!
+ </description>
+     <pubDate>Tue, 13 Jun 2017 11:59:45 +0200</pubDate>
+ <dc:creator>Mpierrot</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/actualidad-prestashop/presentamos-mailchimp-para-prestashop-0</guid>
+  </item>
+  <item>
+    <title>10 años – 10 entrevistas de perfil: Geoffrey Bruyère, cofundador de una tienda online PrestaShop </title>
+    <link>https://www.prestashop.com/es/blog/actualidad-prestashop/10-anos-10-entrevistas-de-perfil-geoffrey-bruyere-cofundador-de-una-tienda-online-prestashop</link>
+    <description>Comienzos / El blog de moda masculina BonneGueule también cumple 10 años en 2017.</description>
+     <pubDate>Tue, 13 Jun 2017 10:53:06 +0200</pubDate>
+ <dc:creator>Mpierrot</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/actualidad-prestashop/10-anos-10-entrevistas-de-perfil-geoffrey-bruyere-cofundador-de-una-tienda-online-prestashop</guid>
+  </item>
+  <item>
+    <title>9 Módulos de Prestashop que harán aumentar rápidamente el tráfico de tu tienda</title>
+    <link>https://www.prestashop.com/es/blog/uncategorized/modulos-para-aumentar-el-trafico-de-tu-tienda</link>
+    <description>Por mucho renombre que tenga negocio online, sin un buen caudal de visitantes no tendrás nunca clientes que compren tus productos o se interesen por tus servicios.</description>
+     <pubDate>Mon, 12 Jun 2017 15:44:56 +0200</pubDate>
+ <dc:creator>Cécile Dubouis</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/uncategorized/modulos-para-aumentar-el-trafico-de-tu-tienda</guid>
+  </item>
+  <item>
+    <title>10 años – 10 entrevistas de perfil: Sébastien Martineau, director general de una agencia premium acreditada por PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/actualidad-prestashop/10-anos-10-entrevistas-de-perfil-sebastien-martineau-director-general-de-una-agencia-premium-acreditada-por-prestashop</link>
+    <description></description>
+     <pubDate>Fri, 09 Jun 2017 16:17:15 +0200</pubDate>
+ <dc:creator>Anonymous</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/actualidad-prestashop/10-anos-10-entrevistas-de-perfil-sebastien-martineau-director-general-de-una-agencia-premium-acreditada-por-prestashop</guid>
+  </item>
+  </channel>
+</rss>

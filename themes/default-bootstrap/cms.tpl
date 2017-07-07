@@ -39,6 +39,7 @@
 	<div class="rte{if $content_only} content_only{/if}">
 		{$cms->content}
 	</div>
+
 {elseif isset($cms_category)}
 	<div class="block-cms">
 		<h1><a href="{if $cms_category->id eq 1}{$base_dir}{else}{$link->getCMSCategoryLink($cms_category->id, $cms_category->link_rewrite)}{/if}">{$cms_category->name|escape:'html':'UTF-8'}</a></h1>

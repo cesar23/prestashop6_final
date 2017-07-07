@@ -109,6 +109,7 @@ class CmsControllerCore extends FrontController
         $this->context->smarty->assign('cgv_id', Configuration::get('PS_CONDITIONS_CMS_ID'));
 
         if ($this->assignCase == 1) {
+            echo 1111111;
             if (isset($this->cms->id_cms_category) && $this->cms->id_cms_category) {
                 $path = Tools::getFullPath($this->cms->id_cms_category, $this->cms->meta_title, 'CMS');
             } elseif (isset($this->cms_category->meta_title)) {
@@ -126,6 +127,7 @@ class CmsControllerCore extends FrontController
                 $this->context->smarty->assign('nobots', true);
             }
         } elseif ($this->assignCase == 2) {
+            // echo 22222222;
             $this->context->smarty->assign(array(
                 'category' => $this->cms_category, //for backward compatibility
                 'cms_category' => $this->cms_category,
@@ -134,7 +136,7 @@ class CmsControllerCore extends FrontController
                 'path' => ($this->cms_category->id !== 1) ? Tools::getPath($this->cms_category->id, $this->cms_category->name, false, 'CMS') : '',
                 'body_classes' => array($this->php_self.'-'.$this->cms_category->id, $this->php_self.'-'.$this->cms_category->link_rewrite)
             ));
-        }
+        }  
 
         $this->setTemplate(_PS_THEME_DIR_.'cms.tpl');
     }

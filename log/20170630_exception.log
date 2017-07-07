@@ -1,0 +1,15 @@
+*ERROR* 	2017/06/30 - 13:44:54: Property SoluWidget1Obj->id is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2017/06/30 - 13:46:39: Property SoluWidget1Obj->titulo is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2017/06/30 - 13:47:45: Property SoluWidget1Obj->titulo is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2017/06/30 - 13:50:24: Property SoluWidget1Obj->id is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2017/06/30 - 13:53:44: Property SoluWidget1Obj->id is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2017/06/30 - 13:56:25: Property SoluWidget1Obj->id is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2017/06/30 - 13:56:38: Property SoluWidget1Obj->id is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2017/06/30 - 18:39:32: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '18:39:32, 2017-06-30 18:39:32)' at line 2<br /><br /><pre> 
+            INSERT INTO `ps_soluwidget1` (`id`, `titulo`, `contenido`, `date_add`, `date_upd`) 
+            VALUES(NULL,  demo, 333333, 2017-06-30 18:39:32, 2017-06-30 18:39:32)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2017/06/30 - 20:36:15: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE `id` = 4' at line 5<br /><br /><pre>UPDATE `ps_soluwidget1`  
+        SET `titulo` = 'enero555',  
+        `contenido` = 'sdfdsf',             
+        `date_upd` = '2017-06-30 20:36:15',  
+        WHERE `id` = 4</pre> at line 791 in file classes/db/Db.php

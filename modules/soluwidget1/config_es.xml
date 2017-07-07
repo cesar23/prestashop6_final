@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>soluwidget1</name>
+	<displayName><![CDATA[Modulo gidget1]]></displayName>
+	<version><![CDATA[1.0]]></version>
+	<description><![CDATA[Modulo para gestionar contenido en la columna izquierda.]]></description>
+	<author><![CDATA[Cesar Auris Saga]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,20 @@
+*ERROR* 	2017/07/01 - 16:43:13: Unknown column 'orden' in 'field list'<br /><br /><pre>  
+            INSERT INTO `ps_soluwidget1` (`id`, `titulo`, `contenido`,`orden`,`active`, `show_titulo`,`date_add`, `date_upd`)  
+            VALUES(NULL,  'demo', 
+             '<p>weqew</p>', 
+               '0',  
+              '1',  
+               '1',  
+             '2017-07-01 16:43:13', 
+              '2017-07-01 16:43:13')  
+              </pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2017/07/01 - 22:48:55: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's standard dummy text ever since the 1500s, when an unknown printer took a galle' at line 3<br /><br /><pre>  
+            INSERT INTO `ps_soluwidget1` (`id`, `titulo`, `contenido`,`orden`,`active`, `show_titulo`,`date_add`, `date_upd`)  
+            VALUES(NULL,  'Informacion de nosotors', 
+             '<p><strong>Lorem Ipsum</strong><span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>', 
+               '3',  
+              '1',  
+               '1',  
+             '2017-07-01 22:48:55', 
+              '2017-07-01 22:48:55')  
+              </pre> at line 791 in file classes/db/Db.php
